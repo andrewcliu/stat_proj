@@ -44,7 +44,8 @@
       data.forEach(crypto => {
         const div = document.createElement('tr');
         div.innerHTML = `
-          <td><img src="${crypto.image}" alt="${crypto.name}" width="20" height="20"></td></td>${crypto.name}</td>
+          <td><img src="${crypto.image}" alt="${crypto.name}" width="20" height="20"></td>
+          </td>${crypto.name}</td>
           <td>(${crypto.symbol.toUpperCase()})</td>
           <td>$${crypto.current_price}</td>
         `;
