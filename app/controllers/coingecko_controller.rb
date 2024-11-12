@@ -1,4 +1,4 @@
-# app/controllers/coingecko_controller.rb
+
 class CoingeckoController < ApplicationController
   require 'net/http'
   require 'uri'
