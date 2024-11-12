@@ -17,6 +17,7 @@
   <h1>Data pulled from Coin Gecko</h1>
   <table class='table table-bordered'>
     <thead>
+      <th></th>
       <th>Name</th>
       <th>Symbol</th>
       <th>Price</th>
@@ -42,7 +43,11 @@
 
       data.forEach(crypto => {
         const div = document.createElement('tr');
-        div.innerHTML = `<td>${crypto.name}</td><td>(${crypto.symbol.toUpperCase()})</td><td>$${crypto.current_price}</td>`;
+        div.innerHTML = `
+          <td><img src="${crypto.image}" alt="${crypto.name}" width="20" height="20"></td></td>${crypto.name}</td>
+          <td>(${crypto.symbol.toUpperCase()})</td>
+          <td>$${crypto.current_price}</td>
+        `;
         output.appendChild(div);
       });
     }
